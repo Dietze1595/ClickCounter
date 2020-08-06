@@ -1,0 +1,227 @@
+﻿@{
+    ViewData["Title"] = "Mod me pls";
+
+    <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+            color: #444444;
+            background-image: url("https://i.picsum.photos/id/482/2000/1000.jpg?hmac=wEPFPRN63-RNTAJZy-enXpPrkU6g6m7dyPNcqGr_GhE");
+            background: #808080;
+        }
+
+        /*--------------------------------------------------------------
+        # Hero Section
+        --------------------------------------------------------------*/
+        #hero {
+            width: 100%;
+            margin-top: 70px;
+        }
+
+            #hero h1 {
+                margin: 0 0 10px 0;
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 56px;
+                color: black;
+            }
+
+            #hero h2 {
+                color: #fff;
+                margin-bottom: 25px;
+                font-size: 24px;
+            }
+
+        /*--------------------------------------------------------------
+        # Sections General
+        --------------------------------------------------------------*/
+        section {
+            padding: 60px 0;
+            overflow: hidden;
+        }
+
+        .section-bg {
+            background-color: #f7fbfe;
+        }
+
+        .section-title {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+            .section-title h2 {
+                font-size: 32px;
+                font-weight: bold;
+                text-transform: uppercase;
+                position: relative;
+                color: #222222;
+            }
+
+                .section-title h2::before, .section-title h2::after {
+                    content: '';
+                    width: 50px;
+                    height: 2px;
+                    background: #3498db;
+                    display: inline-block;
+                }
+
+                .section-title h2::before {
+                    margin: 0 15px 10px 0;
+                }
+
+                .section-title h2::after {
+                    margin: 0 0 10px 15px;
+                }
+
+            .section-title p {
+                margin: 15px 0 0 0;
+            }
+
+        /*--------------------------------------------------------------
+        # About Us
+        --------------------------------------------------------------*/
+        .about .content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+            .about .content ul li {
+                padding-left: 28px;
+                position: relative;
+            }
+
+        /*--------------------------------------------------------------
+        # Services
+        --------------------------------------------------------------*/
+        /*--------------------------------------------------------------
+        # Services
+        --------------------------------------------------------------*/
+        .services .icon-box {
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            background: #cccccc;
+            box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+            transition: all 0.5s ease-in-out;
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+            .services .icon-box::before {
+                content: '';
+                position: absolute;
+                background: dimgray;
+                left: -50px;
+                top: -50px;
+                width: 90px;
+                height: 90px;
+                border-radius: 50px;
+                transition: all 0.5s;
+                z-index: -1;
+            }
+
+            .services .icon-box:hover::before {
+                background: dimgray;
+                right: 0;
+                top: 0;
+                width: 120%;
+                height: 100%;
+                border-radius: 0px;
+            }
+
+        .services .icon {
+            margin: 0 auto 20px auto;
+            padding-top: 10px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            background: #3498db;
+            transition: all 1s ease-in-out;
+        }
+
+            .services .icon i {
+                font-size: 36px;
+                line-height: 1;
+                color: #fff;
+            }
+
+        .services .title {
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+            .services .title a {
+                color: #111;
+            }
+
+        .services .description {
+            font-size: 15px;
+            line-height: 28px;
+            margin-bottom: 0;
+        }
+
+        .services .icon-box:hover .title a, .services .icon-box:hover .description {
+            color: #fff;
+        }
+
+        .services .icon-box:hover .icon {
+            background: #fff;
+        }
+
+            .services .icon-box:hover .icon i {
+                color: #3498db;
+            }
+    </style>
+
+
+
+
+
+
+}
+
+<section id="hero" class="d-flex align-items-center">
+</section>
+
+<main id="main">
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <h2 style="color:#fff">Wieso bist du hier?</h2>
+                <h3 style="color:#fff">Du kannst mich dabei Unterstützen einen Mod bei rAx1337 zu werden <img src="https://static-cdn.jtvnw.net/emoticons/v1/302983758/2.0" alt="1"></h3>
+                <h3 style="color:#fff"> Drücke hierbei den Button für deine Stimme <img src="https://cdn.betterttv.net/emote/5e277e7f1df9195f1a4cc1ba/1x" alt="1"> </h3>
+                <h3 style="color:#fff">Ich habe diese Webseite mit sehr viel 💗 und ☕ in Karlsruhe erstellt</h3>
+            </div>
+
+            <div style="text-align: center">
+                @using (Html.BeginForm("Subscribe", "Home"))
+                {
+                    <button type="submit" name="btnsearch" value=@ViewData["Counter"]>DRÜCK MICH</button>
+                }
+
+                </divstyle="text-align:>
+            </div>
+            <div>
+                <h2 data-aos="fade-up" style="text-align:center;margin-top: 100px;color:#fff">@ViewData["Counter"] Personen möchten Dietze_ als Mod </h2>
+                <h2 data-aos="fade-up" data-aos-delay="400" style="text-align:center;color:#fff">
+                    <img src="https://static-cdn.jtvnw.net/emoticons/v1/302998965/2.0" alt="1">
+                    <img src="https://cdn.betterttv.net/emote/5d38aaa592fc550c2d5996b8/2x" alt="1">
+                </h2>
+            </div>
+    </section>
+</main>
+
+<script type="text/javascript">
+    var doStuff = function () {
+        // Whatever you need it to do.
+    };
+
+    $(document).ready(function() {
+        $('#text').on('focus', function() {
+            doStuff();
+        });
+    });
+</script>
